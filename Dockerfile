@@ -32,10 +32,9 @@ RUN apt-get update \
     && useradd -u 911 -U -d /config -s /bin/false abc \
     && usermod -G users abc
 
-RUN apt-get install -y python-pip
+RUN apt-get -y install python-pip
 RUN pip install --upgrade pip
 RUN pip install arrow pydash tinydb tinydb_serialization python-dotenv
-
 
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
