@@ -35,7 +35,7 @@ RUN apt-get update \
 RUN apt-get update \
     && apt-get -y install python-pip
 RUN pip install --upgrade pip
-RUN pip install arrow pydash tinydb tinydb_serialization python-dotenv pushbullet.py
+RUN pip install arrow pydash tinydb tinydb_serialization python-dotenv pushbullet.py plexapi
 
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
